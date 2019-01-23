@@ -21,5 +21,14 @@ docker-machine version
 # docker-compose
 base=https://github.com/docker/compose/releases/download/1.23.2 && curl -L $base/docker-compose-$(uname -s)-$(uname -m) >/tmp/docker-compose && sudo install /tmp/docker-compose /usr/local/bin/docker-compose
 docker-compose --version
-
+# pip
+sudo apt-get update
+sudo apt-get install python-pip
+pip install --upgrade pip
+hash -r
+# ansible
+pip install ansible --upgrade
+# aws
+pip install boto --user
+pip install boto3 --user
 

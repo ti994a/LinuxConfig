@@ -9,7 +9,10 @@ rm -f "$TEMP_FILE"
 # -- dependencies
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
 sudo apt-get update
 sudo apt-get install docker-ce -y
 # docker-machine
@@ -18,5 +21,14 @@ docker-machine version
 # docker-compose
 base=https://github.com/docker/compose/releases/download/1.23.2 && curl -L $base/docker-compose-$(uname -s)-$(uname -m) >/tmp/docker-compose && sudo install /tmp/docker-compose /usr/local/bin/docker-compose
 docker-compose --version
-
+# pip
+sudo apt-get update
+sudo apt-get install python-pip
+pip install --upgrade pip
+hash -r
+# ansible
+pip install ansible --upgrade
+# aws
+pip install boto --user
+pip install boto3 --user
 
