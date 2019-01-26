@@ -1,6 +1,12 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install tree -y
+# virtualbox
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
+sudo apt update
+sudo apt install virtualbox-6.0 -y
 # visual studio code
 TEMP_FILE="$(mktemp)" && wget -O "$TEMP_FILE" 'https://go.microsoft.com/fwlink/?LinkID=760868' && sudo dpkg -i "$TEMP_FILE"
 sudo apt-get install -f
