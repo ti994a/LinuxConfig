@@ -24,10 +24,10 @@ docker-compose --version
 # pip
 sudo apt-get update
 sudo apt-get install python-pip
-pip install --upgrade pip
+pip install --upgrade pip --user
 hash -r
 # ansible
-pip install ansible --upgrade
+pip install ansible --upgrade --user
 # aws
 pip install boto --user
 pip install boto3 --user
