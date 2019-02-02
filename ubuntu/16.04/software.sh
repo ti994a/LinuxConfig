@@ -1,6 +1,7 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install tree -y
+sudo apt install conky-all -y
 # virtualbox
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
