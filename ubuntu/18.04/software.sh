@@ -2,6 +2,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt install tree -y
 sudo apt install conky-all -y
+sudo apt install awscli
 # virtualbox
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
@@ -36,7 +37,7 @@ pip install --upgrade pip --user
 hash -r
 # ansible
 pip install ansible --upgrade --user
-# aws
+# aws python libraries
 pip install boto --user
 pip install boto3 --user
 
