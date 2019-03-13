@@ -4,7 +4,8 @@ echo "HISTSIZE=" >> ~/.bashrc
 echo "HISTFILESIZE=" >> ~/.bashrc
 . ~/.bashrc
 # install conky-hentry theme
-cd conky-henry/
+mv conky-henry/ $HOME/ 
+cd $HOME/conky-henry/
 sh install.sh
 
 
