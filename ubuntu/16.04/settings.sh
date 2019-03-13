@@ -8,7 +8,8 @@ gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 # set default Files view to list
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 # install conky-hentry theme
-cd conky-henry/
+mv conky-henry/ $HOME/ 
+cd $HOME/conky-henry/
 sh install.sh
 
 
